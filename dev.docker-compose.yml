@@ -5,9 +5,9 @@ version: '3'
 services:
   snipeit:
     build:
-      context: .
+      context: https://github.com/rsdasari01/49er-invsys.git#custom-text
       dockerfile: Dockerfile.alpine
-    container_name: snipeit
+    container_name: snipeit-custom
     ports:
       - "8000:80"
     depends_on:

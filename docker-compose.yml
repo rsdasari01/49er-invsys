@@ -6,7 +6,10 @@ volumes:
 
 services:
   app:
-    image: snipe/snipe-it:${APP_VERSION:-latest}
+    build:
+      context: https://github.com/rsdasari01/49er-invsys.git#custom-text
+      dockerfile: Dockerfile.alpine
+    image: 49er-invsys:custom-text
     restart: unless-stopped
     volumes:
       - storage:/var/lib/snipeit
