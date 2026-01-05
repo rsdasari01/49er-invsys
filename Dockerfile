@@ -90,6 +90,8 @@ COPY docker/docker.env /var/www/html/.env
 
 RUN chown -R docker /var/www/html
 
+RUN chown -R docker /var/www/html/resources/lang/en-custom/
+
 RUN \
 	rm -r "/var/www/html/storage/private_uploads" && ln -fs "/var/lib/snipeit/data/private_uploads" "/var/www/html/storage/private_uploads" \
       && rm -rf "/var/www/html/public/uploads" && ln -fs "/var/lib/snipeit/data/uploads" "/var/www/html/public/uploads" \
